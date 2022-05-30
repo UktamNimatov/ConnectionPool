@@ -34,7 +34,7 @@ public enum ConnectionPool {
     private /*static*/ final Properties properties = new Properties();
     private /*static*/ final InputStream inputStream = ConnectionPool.class.getClassLoader().getResourceAsStream(DATABASE_PROPERTIES);
 
-     /*static*/{
+     /*static*/{ //fixme
          try {
              properties.load(inputStream);
             Class.forName(properties.getProperty(DRIVER));
